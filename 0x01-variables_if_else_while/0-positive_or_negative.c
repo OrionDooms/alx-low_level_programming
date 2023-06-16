@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-/*
- * main - program takes in a random number each time.
- * Description - then if the value is less it prints negative or greater
+
+/* betty style doc for function main goes there */
+/* main - program takes in a random number each time */
+/* Description - then if the value is less it prints negative or greater
  * prints positive and if it's zero it prints.
  * zero
  */
-/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
