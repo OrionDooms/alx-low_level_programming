@@ -5,9 +5,12 @@
 
 /* betty style doc for function main goes there */
 /* main - program takes in a random number each time */
-/* Description - then if the value is less it prints negative or greater
- * prints positive and if it's zero it prints.
- * zero
+
+/*
+ * Description - then if the value is less it prints negative or greater
+ */
+/* 
+ * prints positive and if it's zero it prints zero
  */
 int main(void)
 {
@@ -18,15 +21,15 @@ int main(void)
 	/*your code goes there*/
 	if (n < 0)
 	{
-		printf("negative\n");
+		printf("%d is negative\n");
 	}
 	else if (n > 0)
 	{
-		printf("positive\n");
+		printf("%d is positive\n");
 	}
 	else
 	{
-		printf("zero");
+		printf("%d is zero\n");
 	}
 	return (0);
 }
