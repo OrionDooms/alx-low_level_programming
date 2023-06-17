@@ -7,6 +7,8 @@
  * description - This program takes in a random number each time
  * then if the value is less it prints negative or greater prints
  * positive and if it,s zero it prints zero
+ *
+ * Return: 0 (success)
  */
 int main(void)
 {
