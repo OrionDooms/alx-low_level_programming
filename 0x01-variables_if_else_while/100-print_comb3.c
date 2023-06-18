@@ -10,8 +10,7 @@ int main(void)
 {
 	int num, x;
 
-	num = '0';
-	x = '1';
+	num = '0', x = '1';
 	while (num <= '8')
 	{
 		while (x <= '9')
@@ -36,14 +35,16 @@ int main(void)
 			{
 				putchar(num);
 				putchar(x);
-				putchar(',');
-				putchar(' ');
+				if (num != '8')
+				{
+					putchar(',');
+					putchar(' ');
+				}
 				x++;
 			}
 		}
 		x = '0';
 		num++;
-
 	}
 	putchar('\n');
 	return (0);
