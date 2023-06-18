@@ -30,6 +30,8 @@ int main(void)
 				x = '7';
 			else if (num == '7' && x == '0')
 				x = '8';
+			else if (num == '8' && x == '0')
+				x = '9';
 			else
 			{
 				putchar(num);
