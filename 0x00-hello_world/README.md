@@ -1,12 +1,53 @@
+0x00.c - Hello, world project.
+
+Requirements
+All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+All your files should end with a new line.
+There should be no errors and no warnings during compilation.
+
+Tasks
+
 0. Preprocessor
-Write a script that runs a C file through the preprocessor and save the result into another file.
+A script had to be written that runs a C file through the preprocessor and save the result into another file.
+The C file name will be saved in the variable $CFILE.
+The output should be saved in the file c.
 
-The C file name will be saved in the variable $CFILE
-The output should be saved in the file c
+1. Compiler
+A script had to be written that compiles a C file but does not link.
+The C file name will be saved in the variable $CFILE.The output file should be named the same as the C file, but with the extension .o instead of .c.
 
-1.create a main.c and insert the example text in it.
-2.Then export CFILE=main.c
-3.created 0-preprocessor and in insert a compiling instruction
- gcc -E $CFILE -o c
-4.Run ./0-preprocessor
-5.c file would output the result
+2. AssemblerA script had to be written that generates the assembly code of a C code and save it in an output file.
+The C file name will be saved in the variable $CFILE.
+The output file should be named the same as the C file, but with the extension .s instead of .c.
+
+3. Name
+A script had to be written that compiles a C file and creates an executable named cisfun.
+The C file name will be saved in the variable $CFILE.
+
+4. Hello, puts
+A C program that would print exactly "Programming is like building a multilingual puzzle, followed by a new line.
+Use the function puts.
+You are not allowed to use printf.
+Your program should end with the value 0.
+
+5. Hello, printf
+A C program that would print exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
+Use the function printf.
+You are not allowed to use the function puts.
+Your program should return 0.
+Your program should compile without warning when using the -Wall gcc option.
+
+6. Size is not grandeur, and territory does not make a nation
+A C program that would print the size of various types on the computer it is compiled and run on.
+Your program should return 0
+You might have to install the package libc6-dev-i386 on your Linux to test the -m32 gcc option.
+
+7. Intel
+A script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+The C file name will be saved in the variable $CFILE.
+The output file should be named the same as the C file, but with the extension .s instead of .c.
+
+8. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity.
+A C program that would print exactly and that "piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error.
+You are not allowed to use any functions listed in the NAME section of the man (3) printf or man (3) puts
+Your program should return 1.
