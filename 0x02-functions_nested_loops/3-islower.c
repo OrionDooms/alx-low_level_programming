@@ -17,10 +17,7 @@ int _islower(int c)
 			break;
 			return (1);
 		}
-		else
-		{
-			return (0);
-		}
 		i++;
 	}
+	return (0);
 }
