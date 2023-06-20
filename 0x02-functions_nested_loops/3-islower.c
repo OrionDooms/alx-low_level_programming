@@ -14,7 +14,6 @@ int _islower(int c)
 	{
 		if (c == str[i])
 		{
-			break;
 			return (1);
 		}
 		i++;
