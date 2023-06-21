@@ -1,13 +1,30 @@
 #include "main.h"
+/**
+ * _abs - takes a value and if it is negative it turn it to positive value
+ *  and if the value is positive than it just returns the positive value
+ *  and if it a zero value
+ *  and than it return 0.
+ *  @c: - holds the value that will be test.
+ *  Return: 0 if its zero,
+ */
 
 int _abs(int c)
 {
-	if (c > 0)
+	int x;
+
+	x = 0;
+	if (c < 0)
 	{
-		_putchar(c);
+		x = c * -1;
+		_putchar(x);
+		return (x);
 	}
-	else if (c < 0)
-		c = (-1) * c;
-		_putchar(c);
-	return (0);
+	else if (c > 0)
+	{
+		x = c;
+		_putchar(x);
+		return (x);
+	}
+	else
+		return (x);
 }
