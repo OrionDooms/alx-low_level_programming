@@ -1,12 +1,30 @@
 #include "main.h"
 void print_to_98(int n)
 {
-	while (n <= '"98")
+	int i, c;
+
+	i = '0';
+	c = '0';
+	while (i <= '9')
 	{
-		_putchar(n);
-		_putchar(',');
-		_putchar(' ');
-		n++;
+		while(c <= '9')
+		{
+			if (i == '9' && c == '9')
+			{
+				break;
+			}
+			else
+			{
+				_putchar(i);
+				_putchar(c);
+				_putchar(',');
+				_putchar(' ');
+			}
+			c++;
+		}
+		c = '0';
+		i++;
 	}
 	_putchar('\n');
+
 }
