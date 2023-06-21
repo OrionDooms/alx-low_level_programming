@@ -12,10 +12,12 @@ void jack_bauer(void)
 	c = '0';
 	while (i <= '2')
 	{
-		while (a <= '3')
+		while (a <= '9')
 		{
-			while (b <= '5')
+			if (a != '4')
 			{
+				while (b <= '5')
+				{
 				while (c <= '9')
 				{
 					_putchar(i);
@@ -28,9 +30,12 @@ void jack_bauer(void)
 				}
 				c = '0';
 				b++;
-			}
+				}
 			b = '0';
 			a++;
+			}
+			else
+				break;
 		}
 		a = '0';
 		i++;
