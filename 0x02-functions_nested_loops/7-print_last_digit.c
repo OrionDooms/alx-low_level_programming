@@ -1,9 +1,8 @@
 #include "main.h"
 
-int print_last_digit(int s)
+int print_last_digit(int i)
 {
-	static int last = 0;
-	last = s;
-	_putchar(last);
-	return (0);
+
+	int c = i % 10;
+	return (c);
 }
