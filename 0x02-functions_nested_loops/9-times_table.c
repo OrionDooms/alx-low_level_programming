@@ -4,10 +4,9 @@ void times_table(void)
 	int i, t;
 
 	i = '0';
-	t = '1';
+	t = '0';
 	while (i <= '9')
 	{
-		//i = i * t;
 		_putchar(i);
 		_putchar(',');
 		_putchar(' ');
