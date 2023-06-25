@@ -2,7 +2,7 @@
 /**
  * main - prints multiples of 3 or 5 from 1024 that add everything up.
  */
-void main(void)
+int main(void)
 {
 	int i, c;
 
@@ -25,4 +25,5 @@ void main(void)
 	printf("\n");
 	printf("%d", c);
 	printf("\n");
+	return (0);
 }
