@@ -13,6 +13,10 @@ char *_strncpy(char *dest, char *src, int n)
 	size_t i;
 
 	i = 0;
+	if (dest == NULL && src == NULL)
+	{
+		return (dest);
+	}
 	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
