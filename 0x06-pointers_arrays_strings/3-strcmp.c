@@ -13,28 +13,18 @@ int _strcmp(char *s1, char *s2)
 	int i, b;
 
 	i = 0;
-	if (s1 == NULL || s2 == NULL)
-		return (0);
 	while (s1[i] != '\0')
 	{
 		while (s2[i] != '\0')
 		{
-			if (s1[i] == s2[i])
-			{
-				return (0);
-			}
-			else if (s1[i] > s2[i])
+			if (s1[i] != s2[i])
 			{
 				b = (s1[i] - s2[i]);
 				return (b);
 			}
-			else if (s1[i] < s2[i])
-			{
-				b = s1[i] - s2[i];
-				return (b);
-			}
 			i++;
 		}
+		i++;
 	}
 	return (0);
 }
