@@ -18,7 +18,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		h++;
 	}
-	if (h == NULL)
-		return (NULL);
+	if (needle == NULL)
+		return (h);
 	return (NULL);
 }
