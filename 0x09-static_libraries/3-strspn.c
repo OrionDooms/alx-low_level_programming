@@ -17,10 +17,11 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[i])
 			{
-			       c++;
+				c = (s[i] - accept[i]);
+				return (c);
 			}
 		}
 		i++;
 	}
-	return (c);
+	return (0);
 }
