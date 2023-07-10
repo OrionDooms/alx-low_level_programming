@@ -8,17 +8,29 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *h = haystack;
+	char *a, *b, *h = haystack;
 
 	while (*h != '\0')
 	{
 		if (*h == *needle)
 		{
-			return (h);
+			a = h;
+			b = needle;
+			while (*a && *b)
+			{
+				if (*a != *b)
+				{
+					break;
+				}
+				a++;
+				b++;
+			}
+			if (b == NULL)
+				return (h);
 		}
 		h++;
 	}
-	if (needle == NULL)
-		return (h);
+	/*if (needle == NULL)
+		return (h);*/
 	return (NULL);
 }

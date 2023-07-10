@@ -6,12 +6,13 @@ char *leet(char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if(s[i] == 0) 
+		if (s[i] == 'a' && s[i] == 'A')
 		{
-			if (s[i] >= 'a' && s[i] <= 'z')
-				s[i] = s[i] - 32;
+			i = 4;
 		}
+		s[i];
+
 		i++;
 	}
-	Return (s[i]);i
+	return(s);
 }	
