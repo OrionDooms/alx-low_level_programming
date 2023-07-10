@@ -9,21 +9,20 @@
 char *_strdup(char *str)
 {
 	char *z;
-	int i = 0;
+	int i, a;
 
-	z = malloc(sizeof(char) * 3);
+	i = 0;
+	a = 0;
 	if (str == NULL)
 		return (NULL);
-	else if (str[i] != '\0')
+	while (str[a] != '\0')
+		a++;
+	z = malloc(sizeof(char) * a + 1);
+	while (str[i] != '\0')
 	{
-		while (str[i] != '\0')
-		{
-			z[i] = str[i];
-			i++;
-		}
-		return (z);
+		z[i] = str[i];
+		i++;
 	}
-	else
-		return (NULL);
+	return (z);
 	free(z);
 }
