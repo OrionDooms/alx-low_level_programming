@@ -14,6 +14,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *t;
 	char *ndog, *odog;
 
+	if (name == NULL || owner == NULL || age < 0)
+		return (NULL);
 	ndog = malloc(sizeof(char) * (strlen(name + 1)));
 	odog = malloc(sizeof(char) * (strlen(owner + 1)));
 	ndog = strdup(name);
