@@ -15,7 +15,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	if (separator == NULL)
 		separator = "";
 	va_start(ap, n);
-	while (i <= n)
+	while (i < n)
 	{
 		s = va_arg(ap, char*);
 		if (s == NULL)
