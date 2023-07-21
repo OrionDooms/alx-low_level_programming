@@ -8,11 +8,11 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i;
+	int i = 0;
 	char *str;
 
 	va_start(ap, format);
-	for (i = 0; format[i] != '\0'; i++)
+	while (format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -42,6 +42,7 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
+		i++;
 	}
 	printf("\n");
 	va_end(ap);
