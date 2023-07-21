@@ -12,18 +12,18 @@ int main(int argc, char **argv)
 	int num1, num2, calc;
 	char *operator;
 
-	calc = 0;
 	if (argc > 3)
 	{
 		num1 = atoi(argv[1]);
 		operator = (argv[2]);
 		num2 = atoi(argv[3]);
-		calc = (*get_op_func(s))(num1, num2);
-		return (calc);
+		calc = get_op_func(operator)(num1, num2);
+		printf("%d\n", calc);
 	}
 	else
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	return (0);
 }
