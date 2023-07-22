@@ -17,8 +17,25 @@ int main(int argc, char **argv)
 		num1 = atoi(argv[1]);
 		operator = (argv[2]);
 		num2 = atoi(argv[3]);
-		calc = get_op_func(operator)(num1, num2);
-		printf("%d\n", calc);
+		if (*operator == '+' || *operator == '-' ||
+				*operator == '*' || *operator == '/' ||
+				*operator == '%')
+		{
+			if ((*operator == '/' && num2 == 0) ||
+					(*operator == '%' && num2 == 0))
+			{
+				printf("Error\n");
+				exit(100);
+			}
+			else
+			calc = get_op_func(operator)(num1, num2);
+			printf("%d\n", calc);
+		}
+		else
+		{
+			printf("Error\n");
+			exit(98);
+		}
 	}
 	else
 	{
