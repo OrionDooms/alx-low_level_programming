@@ -18,30 +18,24 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%c", va_arg(ap, int));
-				if (format[i + 1] != '\0')
-					printf(", ");
 				break;
 			case 'i':
 				printf("%d", va_arg(ap, int));
-				if (format[i + 1] != '\0')
-					printf(", ");
 				break;
 			case 'f':
 				printf("%f", va_arg(ap, double));
-				if (format[i + 1] != '\0')
-					printf(", ");
 				break;
 			case 's':
 				str = va_arg(ap, char *);
 				if (str == NULL)
 					printf("(nil)");
 				printf("%s", str);
-				if (format[i + 1] != '\0')
-					printf(", ");
 				break;
 			default:
 				break;
 		}
+		if (format[i + 1] != '\0')
+			printf(", ");
 		i++;
 	}
 	printf("\n");
