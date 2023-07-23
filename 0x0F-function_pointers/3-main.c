@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		else
 		{
 			printf("Error\n");
-			exit(98);
+			exit(99);
 		}
 	}
 	else
