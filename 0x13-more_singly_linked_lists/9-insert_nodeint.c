@@ -19,10 +19,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		vice = vice->next;
 	}
-	if (a > i)
-	{
-		return (NULL);
-	}
 	tmp->next = vice->next;
 	vice->next = tmp;
 	return (tmp);
