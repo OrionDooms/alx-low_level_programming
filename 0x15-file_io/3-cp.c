@@ -1,24 +1,48 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(void)
+/**
+ * main - copies the content of a file to another file.
+ * @ac: number of arguments.
+ * @av: Takes arguments multiplies.
+ * Return: 0 (success).
+ */
+int main(int ac, char **av)
 {
-	FILE *file_from, *file_to;
-	char *buf, filename[100];
-	size_t fp, a, w;
+	int file_from, file_to, r, cls1, cls2;
+	char *buffer = malloc(sizeof(char) * (1024));
 
-	buf = malloc(sizeof(char) * file_from);
-
-	file_from = open(filename, "O_RDONLY");
-	if (file_from == NULL)
-		return (-1);
-	file_to = open(filename, "O_WRONLY");
-        if (file_to == NULL)
-                return (-1);
-	a = read(file_from, buf, 10);
-	w = write(STDOUT_FILENO, buf, a);
-	close(fp);
-	free(buf);
-	return (w);
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	file_from = open(av[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
+	}
+	file_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	r = read(file_from, buffer, 1024);
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
+	write(file_to, buffer, r);
+	cls1 = close(file_from);
+	cls2 = close(file_to);
+	if (cls1 > 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+		exit(100);
+	}
+	if (cls2 > 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
+		exit(100);
+	}
+	free(buffer);
+	return (0);
 }
