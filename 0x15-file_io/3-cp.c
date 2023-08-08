@@ -18,14 +18,14 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	file_from = open(av[1], O_RDONLY);
-	if (file_from == -1)
+	if (file_from == -1 || av[1] == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	file_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	r = read(file_from, buffer, 1024);
-	if (r == -1)
+	if (r == -1 || file_to == -1 || av[2] == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
