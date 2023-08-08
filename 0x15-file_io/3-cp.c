@@ -33,12 +33,12 @@ int main(int ac, char **av)
 	write(file_to, buffer, r);
 	cls1 = close(file_from);
 	cls2 = close(file_to);
-	if (cls1 > 0)
+	if (cls1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	if (cls2 > 0)
+	if (cls2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
