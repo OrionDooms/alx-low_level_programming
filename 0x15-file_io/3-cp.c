@@ -9,7 +9,7 @@
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, r, cls1, cls2;
+	int file_from, file_to, cp, cls1, cls2;
 	char *buffer = malloc(sizeof(char) * (1024));
 
 	if (ac != 3)
@@ -24,13 +24,13 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	file_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	r = read(file_from, buffer, 1024);
-	if (r == -1 || file_to == -1 || av[2] == NULL)
+	cp = read(file_from, buffer, 1024);
+	if (cp == -1 || file_to == -1 || av[2] == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	write(file_to, buffer, r);
+	write(file_to, buffer, cp);
 	cls1 = close(file_from);
 	cls2 = close(file_to);
 	if (cls1)
