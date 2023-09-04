@@ -9,13 +9,13 @@ int create_file(const char *filename, char *text_content)
 {
 	int f, w, i;
 
+	i = 0;
 	if (filename == NULL)
 		return (-1);
 	if (text_content == NULL)
 		text_content = "";
-	else
+	if (text_content != NULL)
 	{
-		i = 0;
 		while (text_content[i])
 			i++;
 	}
