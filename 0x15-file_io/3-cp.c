@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - copies the content of a file to another file.
- * @ac: number of arguments.
- * @av: Takes arguments multiplies.
+ * @argc: number of arguments.
+ * @argv: Takes arguments multiplies.
  * Return: 0 (success).
  */
 int main(int argc, char **argv)
@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(98);
+		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1 || argv[1] == NULL)
