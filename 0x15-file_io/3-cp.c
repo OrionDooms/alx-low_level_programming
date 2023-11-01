@@ -1,4 +1,5 @@
 #include "main.h"
+void close_file(int f);
 /**
  * main - copies the content of a file to another file.
  * @argc: number of arguments.
