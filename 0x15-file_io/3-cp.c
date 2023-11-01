@@ -1,5 +1,4 @@
 #include "main.h"
-void close_file(int f);
 /**
  * main - copies the content of a file to another file.
  * @argc: number of arguments.
@@ -48,7 +47,10 @@ int main(int argc, char **argv)
 	close_file(file_to);
 	return (0);
 }
-
+/**
+ * close_file - program that closes the files.
+ * @f: Takes in a file.
+ */
 void close_file(int f)
 {
 	int cls;
