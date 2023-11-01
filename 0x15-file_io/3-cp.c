@@ -8,7 +8,7 @@ void close_file(int f);
  */
 int main(int argc, char **argv)
 {
-	int file_from, file_to;/*, cls1, cls2;*/
+	int file_from, file_to;
 	ssize_t cp = 1024, file2;
 	char buf[1024];
 
