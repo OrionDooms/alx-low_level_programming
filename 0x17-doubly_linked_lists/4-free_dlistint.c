@@ -17,11 +17,8 @@ void free_dlistint(dlistint_t *head)
 	else
 	{
 		if (del_node->next != NULL)
-		{
 			del_node = del_node->next;
-			free(del_node)
-		}
 		del_node->prev->next = NULL;
-		free(del_node);
 	}
+	free(del_node);
 }
