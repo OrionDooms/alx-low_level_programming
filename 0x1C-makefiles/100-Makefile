@@ -6,6 +6,8 @@ OBJ = $(SRC:.c=.o)
 
 NAME = school
 
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
 all: school.c
 	$(CC) -Wall -Werror -Wextra -pedantic main.c school.c -o $(NAME)
 
