@@ -12,7 +12,7 @@ all: $(OBJ)
 RM = rm -f
 
 clean:
-	$(RM) *~ school
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
