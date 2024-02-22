@@ -8,8 +8,8 @@ NAME = school
 
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: school.c
-	$(CC) -Wall -Werror -Wextra -pedantic main.c school.c -o $(NAME)
+all: $(OBJ)
+        $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 .PHONY: clean
 
